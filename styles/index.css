@@ -9,7 +9,7 @@
 
 h1 { font-size: 64px }
 h2 { font-size: 48px }
-h3 { font-size: 36px }
+h3, .heading-3 { font-size: 36px }
 h4 { font-size: 24px }
 h5 { font-size: 20px }
 h6 { font-size: 16px }
@@ -26,12 +26,18 @@ p {
 h1,
 h2,
 h3,
+.heading-3,
 h4,
 h5,
 h6,
 p,
 .caption {
     color: rgba(255, 255, 255, 1);
+}
+
+.heading-3 { 
+    text-decoration: none;
+    font-weight: bold;
 }
 
 span {
@@ -310,7 +316,7 @@ body {
 @media screen and (max-width: 767px) {
     h1 { font-size: 32px }
     h2 { font-size: 28px }
-    h3 { font-size: 24px }
+    h3, .heading-3 { font-size: 24px }
     h4 { font-size: 20px }
     h5 { font-size: 18px }
     h6 { font-size: 16px }
