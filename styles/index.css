@@ -269,78 +269,96 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .card-exp,
-					.card-skill,
-					.card-works,
-					.card-contact {
-    background-color: rgba(147, 31, 219, 0.2);
-					}
-  
-  .card-works {
-    aspect-ratio: 1/1;
-  }
-  
-  .section>.column:first-child {
-    gap: 20px;
-  }
+    .card-exp,
+    .card-skill,
+    .card-works,
+    .card-contact {
+        background-color: rgba(147, 31, 219, 0.2);
+    }
 
-  .section>.column:last-child {
-    gap: 30px;
-  }
+    .card-works {
+        aspect-ratio: 1/1;
+    }
+
+    #viewport>div {
+        max-width: 580px;
+    }
+
+    .section {
+        padding: 80px 0px;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .section>.column:first-child {
+        gap: 20px;
+    }
+
+    .section>.column:last-child {
+        gap: 30px;
+    }
+
+    .card-works {
+        aspect-ratio: 16/9;
+    }
+
+    #section-about .image {
+        height: 600px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-  h1 { font-size: 32px }
-					h2 { font-size: 28px }
-					h3 { font-size: 24px }
-					h4 { font-size: 20px }
-					h5 { font-size: 18px }
-					h6 { font-size: 16px }
-  
-  p { font-size: 14px }
-  
-  .section {
-    padding: 50px 20px;
-    gap: 30px;
-    flex-direction: column;
-  }
-  
-  .card-exp,
-					.card-skill,
-					.card-contact {
-    background-color: rgba(147, 31, 219, 0.2);
-					  padding: 20px;
-					}
-  
-  .card-works>.column {
-    padding: 20px;
-  }
-  
-  .card-works {
-    aspect-ratio: 1/1;
-  }
-  
-  .section>.column:first-child {
-    gap: 20px;
-  }
+    h1 { font-size: 32px }
+    h2 { font-size: 28px }
+    h3 { font-size: 24px }
+    h4 { font-size: 20px }
+    h5 { font-size: 18px }
+    h6 { font-size: 16px }
 
-  .section>.column:last-child {
-    gap: 30px;
-  }
-  
-  .section>.column {
-    width: 100%;
-  }
-  
-  #section-hero #menu {
-    gap: 20px;
-  }
-  
-  #section-hero #menu>a{
-    font-size: 12px;
-  }
-  
-  #section-about .image {
-    height: 400px;
-  }
+    p { font-size: 14px }
+
+    .section {
+        padding: 50px 20px;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .card-exp,
+    .card-skill,
+    .card-contact {
+        background-color: rgba(147, 31, 219, 0.2);
+        padding: 20px;
+    }
+
+    .card-works>.column {
+        padding: 20px;
+    }
+
+    .card-works {
+        aspect-ratio: 1/1;
+    }
+
+    .section>.column:first-child {
+        gap: 20px;
+    }
+
+    .section>.column:last-child {
+        gap: 30px;
+    }
+
+    .section>.column {
+        width: 100%;
+    }
+
+    #section-hero #menu {
+        gap: 20px;
+    }
+
+    #section-hero #menu>a{
+        font-size: 12px;
+    }
+
+    #section-about .image {
+        height: 400px;
+    }
 }
