@@ -194,26 +194,30 @@ body {
 }
 
 .card-works:nth-child(1) {
-    background-image: url('../assets/images/portfolio-1.png');
+    background-image: url('../assets/images/portfolio-7.png');
 }
 
 .card-works:nth-child(2) {
-    background-image: url('../assets/images/portfolio-5.png');
+    background-image: url('../assets/images/portfolio-1.png');
 }
 
 .card-works:nth-child(3) {
-    background-image: url('../assets/images/portfolio-6.png');
+    background-image: url('../assets/images/portfolio-5.png');
 }
 
 .card-works:nth-child(4) {
-    background-image: url('../assets/images/portfolio-2.png');
+    background-image: url('../assets/images/portfolio-6.png');
 }
 
 .card-works:nth-child(5) {
-    background-image: url('../assets/images/portfolio-4.png');
+    background-image: url('../assets/images/portfolio-2.png');
 }
 
 .card-works:nth-child(6) {
+    background-image: url('../assets/images/portfolio-4.png');
+}
+
+.card-works:nth-child(7) {
     background-image: url('../assets/images/portfolio-3.png');
 }
 
