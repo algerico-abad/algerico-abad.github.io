@@ -66,11 +66,17 @@ body {
     border-radius: 20px;
 }
 
+.sticky-title {
+    position: sticky;
+    align-self: flex-start;
+    top: 80px;
+}
+
 #viewport {
     width: 100%;
 }
 
-.section {
+section {
     display: flex;
     margin: auto;
 }
@@ -168,7 +174,7 @@ body {
 .card-skill>.row,
 .card-works>.column>.row {
     gap: 10px;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .card-works {
@@ -177,6 +183,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .card-works>.column {
@@ -188,40 +195,12 @@ body {
     gap: 10px;
 }
 
-.card-works .chip {
+.chip {
     color: #FFFFFF;
     background-color: #931FDB;
 }
 
-.card-works:nth-child(1) {
-    background-image: url('../assets/images/portfolio-7.png');
-}
-
-.card-works:nth-child(2) {
-    background-image: url('../assets/images/portfolio-1.png');
-}
-
-.card-works:nth-child(3) {
-    background-image: url('../assets/images/portfolio-5.png');
-}
-
-.card-works:nth-child(4) {
-    background-image: url('../assets/images/portfolio-6.png');
-}
-
-.card-works:nth-child(5) {
-    background-image: url('../assets/images/portfolio-2.png');
-}
-
-.card-works:nth-child(6) {
-    background-image: url('../assets/images/portfolio-4.png');
-}
-
-.card-works:nth-child(7) {
-    background-image: url('../assets/images/portfolio-3.png');
-}
-
-#section-about .image {
+.image {
     height: 800px;
     background-image: url('../assets/images/profile.jpg');
     background-position: center;
@@ -239,8 +218,8 @@ body {
 .card-contact .icon {
     min-height: 50px;
     min-width: 50px;
-  max-width: 50px;
-  max-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 10px;
     background-color: #931FDB;
     display: flex;
@@ -255,25 +234,18 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    #viewport>div {
+    section {
         max-width: 1200px;
-    }
-
-    .section {
-        padding: 100px 0px;
-        flex-direction: row;
         gap: 30px;
+        box-sizing: border-box;
+        padding: 80px 0px;
     }
 
-    .section>.column {
-        width: calc(50% - 15px);
+    section>div {
+        max-width: 50%;
     }
 
-    .section>.column:first-child {
-        gap: 20px;
-    }
-
-    .section>.column:last-child {
+    section>div:last-child {
         gap: 30px;
     }
 }
@@ -294,26 +266,8 @@ body {
         max-width: 580px;
     }
 
-    .section {
-        padding: 80px 0px;
-        gap: 30px;
-        flex-direction: column;
-    }
-
-    .section>.column:first-child {
-        gap: 20px;
-    }
-
-    .section>.column:last-child {
-        gap: 30px;
-    }
-
     .card-works {
         aspect-ratio: 16/9;
-    }
-
-    #section-about .image {
-        height: 600px;
     }
 }
 
@@ -326,12 +280,6 @@ body {
     h6 { font-size: 16px }
 
     p { font-size: 14px }
-
-    .section {
-        padding: 50px 20px;
-        gap: 30px;
-        flex-direction: column;
-    }
 
     .card-exp,
     .card-skill,
@@ -346,29 +294,5 @@ body {
 
     .card-works {
         aspect-ratio: 1/1;
-    }
-
-    .section>.column:first-child {
-        gap: 20px;
-    }
-
-    .section>.column:last-child {
-        gap: 30px;
-    }
-
-    .section>.column {
-        width: 100%;
-    }
-
-    #section-hero #menu {
-        gap: 20px;
-    }
-
-    #section-hero #menu>a{
-        font-size: 12px;
-    }
-
-    #section-about .image {
-        height: 400px;
     }
 }
