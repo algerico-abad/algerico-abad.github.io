@@ -128,12 +128,12 @@ nav>div a:hover {
     box-sizing: border-box;
     font-size: 16px;
     text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.10);
 }
 
 .btn-text-pri>span,
 .btn-text-sub>span {
     font-family: 'Bebas Neue';
-    line-height: 10px;
     color: #FFFFFF;
 }
 
@@ -179,6 +179,22 @@ nav>div a:hover {
 
 .card-exp>.column:last-child>.column {
     gap: 4px;
+}
+
+.skill-card {
+    aspect-ratio: 1/1;
+    width: calc(33.33% - 30px);
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: saturate(0%);
+    transition: 0.25s;
+}
+
+.skill-card:hover {
+    filter: saturate(100%);
 }
 
 .card-skill,
@@ -289,6 +305,23 @@ nav>div a:hover {
 }
 
 #section-experiences>div {
+    gap: 40px;
+}
+
+#section-skills>div {
+    gap: 30px;
+}
+
+#section-skills>div>div {
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+#section-skills>div>div:first-child {
+    gap: 30px;
+}
+
+#section-skills>div>div:last-child {
     gap: 40px;
 }
 
