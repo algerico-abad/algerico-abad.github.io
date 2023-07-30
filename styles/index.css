@@ -183,42 +183,28 @@ nav>div a:hover {
 
 .skill-card {
     aspect-ratio: 1/1;
-    width: calc(33.33% - 30px);
+    width: calc(33.33% - 20px);
     background-color: rgba(255, 255, 255, 0.10);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: saturate(0%);
     transition: 0.25s;
 }
 
-.skill-card:hover {
-    filter: saturate(100%);
-}
-
-.card-skill,
-.card-works,
-.card-contact {
-    background-color: rgba(147, 31, 219, 0.1);
+.card-works {
+    background-color: rgba(0, 0, 0, 0.10);
     min-height: 50px;
     border-radius: 20px;
     box-sizing: border-box;
 }
 
-.card-skill,
-.card-contact {
-    padding: 30px;
-}
-
-.card-skill,
 .card-works {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.card-skill>.row,
 .card-works>.column>.row {
     gap: 10px;
     flex-wrap: wrap;
@@ -234,12 +220,16 @@ nav>div a:hover {
 }
 
 .card-works>.column {
-    background: linear-gradient(0deg, rgba(35,6,52,0.9) 0%, rgba(35,6,52,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
     height: 100%;
     box-sizing: border-box;
     padding: 30px;
     justify-content: end;
-    gap: 10px;
+    gap: 20px;
+}
+
+.card-works>.column>div:first-child {
+    width: 50%;
 }
 
 .chip {
@@ -278,6 +268,22 @@ nav>div a:hover {
     fill: #FFFFFF;
     width: 30px;
     height: 24px;
+}
+
+.social-icons {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons svg {
+    height: 20px;
+    width: 20px;
+    fill: #FFFFFF;
 }
 
 #section-hero {
@@ -323,6 +329,50 @@ nav>div a:hover {
 
 #section-skills>div>div:last-child {
     gap: 40px;
+}
+
+#section-works>div {
+    max-width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+
+#section-works>div>.column {
+    width: 50%;
+    text-align: center;
+}
+
+#section-works>div>.row {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-y: hidden;
+    padding: 0px 5.33%;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+#section-works>div>.row::-webkit-scrollbar {
+    display: none;
+}
+
+#section-works>div>.row .card-works {
+    min-width: calc(100% - 20%);
+    max-width: 1200px;
+}
+
+#section-contact>div {
+    align-items: center;
+}
+
+#section-contact>div>* {
+    width: 50%;
+    align-items: center;
+    text-align: center;
+}
+
+#section-contact>div>.row {
+    justify-content: center;
+    gap: 16px;
 }
 
 @media screen and (min-width: 1200px) {
