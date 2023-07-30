@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     font-family: Inter;
@@ -9,12 +10,15 @@
 
 h1 { font-size: 64px }
 h2 { font-size: 48px }
-h3, .heading-3 { font-size: 36px }
+h3 { font-size: 36px }
 h4 { font-size: 24px }
 h5 { font-size: 20px }
 h6 { font-size: 16px }
 
-h1 { font-weight: 900 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+}
 
 p { 
     font-size: 16px;
@@ -26,22 +30,18 @@ p {
 h1,
 h2,
 h3,
-.heading-3,
 h4,
 h5,
-h6,
-p,
+h6 {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+p {
+    color: rgba(255, 255, 255, 0.60);
+}
+
 .caption {
-    color: rgba(255, 255, 255, 1);
-}
-
-.heading-3 { 
-    text-decoration: none;
-    font-weight: bold;
-}
-
-span {
-    color: #931FDB;
+    color: rgba(255, 255, 255, 0.50);
 }
 
 body {
@@ -74,75 +74,113 @@ body {
 
 #viewport {
     width: 100%;
+    height: 100vh;
 }
 
 section {
     display: flex;
     margin: auto;
+    position: relative;
+    padding: 80px 0px;
 }
 
-#section-hero {
-    height: 100vh;
-    width: 100% !important;
-    max-width: 100% !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    flex-direction: column;
-    background-color: #111111;
+section>div {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
-#section-hero>.column {
-    gap: 20px;
-}
-
-#section-hero>.column>h1,
-#section-hero>.column>p {
-    text-align: center;
-}
-
-#section-hero>.column>.row {
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-#section-hero #menu {
+nav {
+    width: 100%;
+    justify-content: space-between;
     position: absolute;
-    top: 50px;
-    gap: 40px;
+    top: 40px;
+    left: 0px;
+    right: 0px;
 }
 
-#section-hero #menu>a {
+nav>a {
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
-    color: #FFFFFF;
-    font-size: 16px;
 }
 
-#section-hero #menu>a:hover {
+nav>div {
+    gap: 40px;
+    align-items: center;
+}
+
+nav>div a {
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    color: #FFFFFF;
+}
+
+nav>div a:hover {
     color: #931FDB;
 }
 
 .btn-text-pri,
 .btn-text-sub {
-    padding: 12px 35px;
+    padding: 10px 30px;
     border-radius: 25px;
     box-sizing: border-box;
     font-size: 16px;
-    font-weight: bold;
     text-decoration: none;
+}
+
+.btn-text-pri>span,
+.btn-text-sub>span {
+    font-family: 'Bebas Neue';
+    line-height: 10px;
     color: #FFFFFF;
 }
 
 .btn-text-pri {
-    background-color: #931FDB;
+    background-color: rgba(255, 255, 255, 0.10);
 }
 
 .btn-text-sub {
-    border: 4px solid #931FDB;
+    border: 2px solid rgba(255, 255, 255, 0.10);
 }
 
-.card-exp,
+.card-exp {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card-exp h3 {
+    line-height: 30px;
+}
+
+.card-exp .shape-circle {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.card-exp .shape-line-v {
+    width: 1px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+}
+
+.card-exp>.column:first-child {
+    align-items: center;
+}
+
+.card-exp>.column:last-child {
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.card-exp>.column:last-child>.column {
+    gap: 4px;
+}
+
 .card-skill,
 .card-works,
 .card-contact {
@@ -152,13 +190,11 @@ section {
     box-sizing: border-box;
 }
 
-.card-exp,
 .card-skill,
 .card-contact {
     padding: 30px;
 }
 
-.card-exp,
 .card-skill,
 .card-works {
     display: flex;
@@ -166,11 +202,6 @@ section {
     gap: 20px;
 }
 
-.card-exp>.column {
-    gap: 4px;
-}
-
-.card-exp>.row,
 .card-skill>.row,
 .card-works>.column>.row {
     gap: 10px;
@@ -233,25 +264,48 @@ section {
     height: 24px;
 }
 
+#section-hero {
+    background-image: url(../assets/images/hero-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding: 0px;
+}
+
+#section-hero>div {
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    background: linear-gradient(-45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+#section-hero>div>.column {
+    gap: 20px;
+}
+
+#section-hero>div>.column>.row {
+    gap: 10px;
+}
+
+#section-experiences>div {
+    gap: 40px;
+}
+
 @media screen and (min-width: 1200px) {
-    section {
+    section>div,
+    #section-hero>div>* {
+        width: 100%;
         max-width: 1200px;
-        gap: 30px;
-        box-sizing: border-box;
-        padding: 80px 0px;
+        margin: auto;
     }
 
-    section>div {
-        max-width: 50%;
-    }
-
-    section>div:last-child {
-        gap: 30px;
+    #section-hero>div>.column>* {
+        width: 50%;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .card-exp,
     .card-skill,
     .card-works,
     .card-contact {
@@ -274,14 +328,13 @@ section {
 @media screen and (max-width: 767px) {
     h1 { font-size: 32px }
     h2 { font-size: 28px }
-    h3, .heading-3 { font-size: 24px }
+    h3 { font-size: 24px }
     h4 { font-size: 20px }
     h5 { font-size: 18px }
     h6 { font-size: 16px }
 
     p { font-size: 14px }
 
-    .card-exp,
     .card-skill,
     .card-contact {
         background-color: rgba(147, 31, 219, 0.2);

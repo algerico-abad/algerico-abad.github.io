@@ -17,6 +17,16 @@
         <meta property="twitter:title" content="Algerico Abad" />
         <meta property="twitter:description" content="An enthusiastic and versatile individual with a passion for programming, skilled in web development, Android app development, and UI/UX designing." />
         <meta property="twitter:image" content="https://i.ibb.co/9tR7JHG/Thumbnail-1.png" />
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#111111">
+        <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#111111">
+        <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <!-- Webpage Specific Meta Tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <!-- Stylesheets -->
@@ -25,71 +35,92 @@
     <body>
         <div id="viewport">
             <section id="section-hero">
-                <div class="row" id="menu">
-                    <a href="#section-experiences">Experiences</a>
-                    <a href="#section-skills">Skills</a>
-                    <a href="#section-works">Works</a>
-                    <a href="#section-about">About</a>
-                    <a href="#section-contact">Contacts</a>
-                </div>
                 <div class="column">
-                    <h1>I’m Algerico<br>A <span>Web Developer</span></h1>
-                    <p>Android Application Development | UI/UX Designer</p>
-                    <div class="row">
-                        <a href="#section-contact" class="btn-text-pri">Contact Me</a>
-                        <a href="#section-experiences" class="btn-text-sub">Learn More</a>
+                    <nav class="row">
+                        <a class="row" href="#">
+                            <div class="icon">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="8" fill="#222222"/>
+                                    <path d="M30 8H18L6 40H18L30 8Z" fill="white" fill-opacity="0.5"/>
+                                    <path d="M42 40H24L33 16L42 40Z" fill="white" fill-opacity="0.5"/>
+                                    <path d="M18 8H30L42 40H30L18 8Z" fill="white"/>
+                                </svg>                                
+                            </div>
+                            <h4>ALGERICO ABAD</h4>
+                        </a>
+                        <div class="row">
+                            <a href="#section-experiences">Experiences</a>
+                            <a href="#section-skills">Skills & Me</a>
+                            <a href="#section-works">Works</a>
+                            <a href="#section-contact">Contacts</a>
+                        </div>
+                    </nav>
+                    <div class="column">
+                        <div class="column">
+                            <h1>ALGERICO CEDRIC ABAD</h1>
+                            <p>An enthusiastic and versatile individual with a passion for programming, skilled in Web Development, Android App Development, and UI/UX Designing.</p>
+                        </div>
+                        <div class="row">
+                            <a href="#section-contact" class="btn-text-pri"><span>Contact Me</span></a>
+                            <a href="#section-experiences" class="btn-text-sub"><span>Learn More</span></a>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="column sticky-title">
-                    <h2>Experiences</h2>
-                    <p>Over the years, this are the experiences that I have accumulated from being a Web Developer to UX/UI Designing.</p>
-                </div>
+            <section id="section-experiences">
                 <div class="column">
-                    <div class="card-exp">
-                        <div class="column">
-                            <h3>AL Designs - UX/UI Designer</h3>
-                            <div class="caption">November 2019 - Present</div>
+                    <h1>Experiences</h1>
+                    <div class="column">
+                        <div class="card-exp">
+                            <div class="column">
+                                <div class="shape-circle"></div>
+                                <div class="shape-line-v"></div>
+                            </div>
+                            <div class="column">
+                                <div class="column">
+                                    <h3>AL Designs - UX/UI Designer</h3>
+                                    <div class="caption">November 2019 - Present</div>
+                                </div>
+                                <p>Created a YouTube channel that specializes in designing user interfaces and has garnered approximately 180 subscribers and achieved 4K views on a single video.</p>
+                            </div>
                         </div>
-                        <p>I created a YouTube channel that specializes in designing user interfaces and has garnered approximately 180 subscribers and achieved 4K views on a single video.</p>
-                        <div class="row">
-                            <div class="chip">UX/UI Designing</div>
+                        <div class="card-exp">
+                            <div class="column">
+                                <div class="shape-circle"></div>
+                                <div class="shape-line-v"></div>
+                            </div>
+                            <div class="column">
+                                <div class="column">
+                                    <h3>Archicoders - Intern</h3>
+                                    <div class="caption">February - March 2023</div>
+                                </div>
+                                <p>Worked converting XD and Figma designs into Wordpress using Elementor and as a Web Designer Intern for under 486 hours.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-exp">
-                        <div class="column">
-                            <h3>Archicoders - Intern</h3>
-                            <div class="caption">February - March 2023</div>
+                        <div class="card-exp">
+                            <div class="column">
+                                <div class="shape-circle"></div>
+                                <div class="shape-line-v"></div>
+                            </div>
+                            <div class="column">
+                                <div class="column">
+                                    <h3>MaiClo Apparel - Web Developer</h3>
+                                    <div class="caption">July - December 2022</div>
+                                </div>
+                                <p>Developed an e-commerce platform with front-end and back-end that manages customer inquiries and customer orders.</p>
+                            </div>
                         </div>
-                        <p>Worked converting XD and Figma designs into Wordpress using Elementor and as a Web Designer Intern for under 486 hours.</p>
-                        <div class="row">
-                            <div class="chip">Wordpress Development</div>
-                            <div class="chip">UX/UI Designing</div>
-                        </div>
-                    </div>
-                    <div class="card-exp">
-                        <div class="column">
-                            <h3>MaiClo Apparel - Web Developer</h3>
-                            <div class="caption">July - December 2022</div>
-                        </div>
-                        <p>Developed an e-commerce platform with front-end and back-end that manages customer inquiries and customer orders.</p>
-                        <div class="row">
-                            <div class="chip">HTML</div>
-                            <div class="chip">CSS</div>
-                            <div class="chip">JavaScript</div>
-                            <div class="chip">Firebase</div>
-                            <div class="chip">UX/UI Designing</div>
-                        </div>
-                    </div>
-                    <div class="card-exp">
-                        <div class="column">
-                            <h3>AdaptDev Solutions - Intern</h3>
-                            <div class="caption">November 2018 - February 2019</div>
-                        </div>
-                        <p>Worked as a Python Developer Intern for creating Raspberry Pi prototypes for under 90 hours.</p>
-                        <div class="row">
-                            <div class="chip">Python Development</div>
+                        <div class="card-exp">
+                            <div class="column">
+                                <div class="shape-circle"></div>
+                            </div>
+                            <div class="column">
+                                <div class="column">
+                                    <h3>AdaptDev Solutions - Intern</h3>
+                                    <div class="caption">November 2018 - February 2019</div>
+                                </div>
+                                <p>Worked as a Python Developer Intern for creating Raspberry Pi prototypes for under 90 hours.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
