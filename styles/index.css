@@ -383,6 +383,10 @@ nav>div a:hover {
         width: 80px;
     }
 
+    nav .btn-icon {
+        display: none;
+    }
+
     section>div,
     #section-hero>div>* {
         width: 100%;
@@ -448,6 +452,10 @@ nav>div a:hover {
     }
 
     nav {
+        display: flex;
+    }
+
+    nav .btn-icon {
         display: flex;
     }
 
