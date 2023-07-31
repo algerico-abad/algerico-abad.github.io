@@ -242,6 +242,8 @@ nav>div a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-sizing: border-box;
 }
 
 .card-works {
@@ -268,6 +270,7 @@ nav>div a:hover {
     background-repeat: no-repeat;
     overflow: hidden;
     text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .card-works>.column {
@@ -277,39 +280,6 @@ nav>div a:hover {
     padding: 30px;
     justify-content: end;
     gap: 20px;
-}
-
-.image {
-    height: 800px;
-    background-image: url('../assets/images/profile.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-}
-
-.card-contact {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-
-.card-contact .icon {
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 10px;
-    background-color: #931FDB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-contact .icon>svg {
-    fill: #FFFFFF;
-    width: 30px;
-    height: 24px;
 }
 
 .social-icons {
