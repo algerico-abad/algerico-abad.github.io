@@ -3,7 +3,7 @@ let slideCarousel
 let slideControls, btnSlideLeft, btnSlideRight, slidePages
 // global variables
 let currentFocusedNode
-let previousScrollLeft
+let previousScrollLeft = 0
 // instantiate the viewport objects
 window.onload = () => {
     // instantiate elements from the slider carousel
@@ -26,7 +26,10 @@ window.onload = () => {
     btnSlideLeft.style.pointerEvents = 'none'
     btnSlideLeft.style.opacity = '0.5'
     // insert event listeners
-    slideCarousel.onscroll = () => {
+    let updateScroll = false
+    slideCarousel.onwheel = () => { updateScroll = true }
+    slideCarousel.ontouchmove = () => { updateScroll = true }
+    slideCarousel.onscrollend = () => {
         for (let i = 0; i < slideCarousel.children.length; i++) {
             slidePages.children[i].className = 'page-btn-inactive'
             if (isInViewport(slideCarousel.children[i])) {
@@ -46,13 +49,14 @@ window.onload = () => {
                 }
             }
         }
-    }
-    slideCarousel.onscrollend = () => {
-        if (previousScrollLeft < slideCarousel.scrollLeft) {
+        if (previousScrollLeft < slideCarousel.scrollLeft && updateScroll) {
             console.log('scroll to right...')
-        } else if (previousScrollLeft > slideCarousel.scrollLeft) {
+            slideCarousel.scroll(currentFocusedNode.nextElementSibling.offsetLeft - 30, 0)
+        } else if (previousScrollLeft > slideCarousel.scrollLeft && updateScroll) {
             console.log('scroll to left...')
+            slideCarousel.scroll(currentFocusedNode.previousElementSibling.offsetLeft - 30, 0)
         }
+        updateScroll = false
         previousScrollLeft = slideCarousel.scrollLeft
     }
     btnSlideLeft.onclick = () => {
@@ -68,11 +72,8 @@ window.onload = () => {
 // determine what element is visible on the screen
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    console.log(rect.bottom <= slideCarousel.clientHeight)
     return (
-        rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
