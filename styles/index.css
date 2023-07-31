@@ -46,6 +46,7 @@ p {
 
 body {
     background-color: rgba(0, 0, 0, 1);
+    overflow: hidden;
 }
 
 .row {
@@ -92,6 +93,40 @@ body {
 #viewport {
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
+}
+
+#mobile-navigation {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(6px);
+    transition: 1s;
+    z-index: 10;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#mobile-navigation>.row {
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+#mobile-navigation>.column {
+    flex-grow: 1;
+    overflow-x: hidden;
+}
+
+#mobile-navigation>.column a {
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 14px 20px;
 }
 
 section {
@@ -333,7 +368,7 @@ nav>div a:hover {
 }
 
 #section-skills>div>div:last-child {
-    gap: 40px;
+    gap: 30px;
 }
 
 #section-works>div {
@@ -363,6 +398,7 @@ nav>div a:hover {
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 #section-works>div>#slide-controls .btn-icon {
